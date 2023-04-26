@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package calculator;
+
+option java_package = "com.proto.squareroot";
+option java_multiple_files = true;
+
+message SquareRootRequest {
+  optional double input_value = 1;
+}
+
+message SquareRootResponse {
+  double result = 1;
+}
+
+service SquareRootService {
+  rpc SquareRoot(SquareRootRequest) returns (SquareRootResponse) {};
+}
