@@ -4,12 +4,10 @@ import com.proto.squareroot.SquareRootRequest;
 import com.proto.squareroot.SquareRootResponse;
 import com.proto.squareroot.SquareRootServiceGrpc;
 import io.grpc.Status;
-import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
-import io.grpc.stub.annotations.GrpcGenerated;
-import net.devh.boot.grpc.server.service.GrpcService;
+import org.lognet.springboot.grpc.GRpcService;
 
-@GrpcService
+@GRpcService
 public class SquareRootServiceImpl extends SquareRootServiceGrpc.SquareRootServiceImplBase {
     @Override
     public void squareRoot(SquareRootRequest request, StreamObserver<SquareRootResponse> responseObserver) {
